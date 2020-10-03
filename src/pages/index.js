@@ -1,271 +1,84 @@
-import { h } from "preact";
+import { h, Fragment } from "preact";
 import { Helmet } from "react-helmet";
 
 export default (props) => (
-  <div>
-    <Helmet>
-      <link rel="stylesheet" href="/styles.css" />
-    </Helmet>
-    <div class="relative bg-gray-50 overflow-hidden">
-      <div class="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full">
-        <div class="relative h-full max-w-screen-xl mx-auto">
-          <svg
-            class="absolute right-full transform translate-y-1/4 translate-x-1/4 lg:translate-x-1/2"
-            width="404"
-            height="784"
-            fill="none"
-            viewBox="0 0 404 784"
-          >
-            <defs>
-              <pattern
-                id="f210dbf6-a58d-4871-961e-36d5016a0f49"
-                x="0"
-                y="0"
-                width="20"
-                height="20"
-                patternUnits="userSpaceOnUse"
-              >
-                <rect
-                  x="0"
-                  y="0"
-                  width="4"
-                  height="4"
-                  class="text-gray-200"
-                  fill="currentColor"
-                />
-              </pattern>
-            </defs>
-            <rect
-              width="404"
-              height="784"
-              fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)"
-            />
-          </svg>
-          <svg
-            class="absolute left-full transform -translate-y-3/4 -translate-x-1/4 md:-translate-y-1/2 lg:-translate-x-1/2"
-            width="404"
-            height="784"
-            fill="none"
-            viewBox="0 0 404 784"
-          >
-            <defs>
-              <pattern
-                id="5d0dd344-b041-4d26-bec4-8d33ea57ec9b"
-                x="0"
-                y="0"
-                width="20"
-                height="20"
-                patternUnits="userSpaceOnUse"
-              >
-                <rect
-                  x="0"
-                  y="0"
-                  width="4"
-                  height="4"
-                  class="text-gray-200"
-                  fill="currentColor"
-                />
-              </pattern>
-            </defs>
-            <rect
-              width="404"
-              height="784"
-              fill="url(#5d0dd344-b041-4d26-bec4-8d33ea57ec9b)"
-            />
-          </svg>
-        </div>
-      </div>
+  <Fragment>
+    <style
+      dangerouslySetInnerHTML={{
+        __html: `.custom-shape-divider-bottom-1601755347 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
 
-      <div class="relative pt-6 pb-12 sm:pb-16 md:pb-20 lg:pb-28 xl:pb-32">
-        <div class="max-w-screen-xl mx-auto px-4 sm:px-6">
-          <nav class="relative flex items-center justify-between sm:h-10 md:justify-center">
-            <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
-              <div class="flex items-center justify-between w-full md:w-auto">
-                <a href="#" aria-label="Home">
-                  <img
-                    class="h-8 w-auto sm:h-10"
-                    src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg"
-                    alt="Logo"
-                  />
-                </a>
-                <div class="-mr-2 flex items-center md:hidden">
-                  <button
-                    type="button"
-                    class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
-                    id="main-menu"
-                    aria-label="Main menu"
-                    aria-haspopup="true"
-                  >
-                    <svg
-                      class="h-6 w-6"
-                      stroke="currentColor"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M4 6h16M4 12h16M4 18h16"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="hidden md:flex md:space-x-10">
-              <a
-                href="#"
-                class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
-              >
-                Product
-              </a>
-              <a
-                href="#"
-                class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
-              >
-                Features
-              </a>
-              <a
-                href="#"
-                class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
-              >
-                Marketplace
-              </a>
-              <a
-                href="#"
-                class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
-              >
-                Company
-              </a>
-            </div>
-            <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
-              <span class="inline-flex rounded-md shadow">
-                <a
-                  href="#"
-                  class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-600 bg-white hover:text-indigo-500 focus:outline-none focus:border-indigo-300 focus:shadow-outline-indigo active:bg-gray-50 active:text-indigo-700 transition duration-150 ease-in-out"
-                >
-                  Log in
-                </a>
-              </span>
-            </div>
-          </nav>
-        </div>
+.custom-shape-divider-bottom-1601755347 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
 
-        <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-          <div class="rounded-lg shadow-md">
-            <div
-              class="rounded-lg bg-white shadow-xs overflow-hidden"
-              role="menu"
-              aria-orientation="vertical"
-              aria-labelledby="main-menu"
+.custom-shape-divider-bottom-1601755347 .shape-fill {
+    fill: #FFFFFF;
+}`,
+      }}
+    />
+    <main class="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 xl:mt-28">
+      <div class="text-center pb-32">
+        <h2 class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
+          The best place to <br class="xl:hidden" />
+          stack your <span class="text-teal-600">JAM</span>
+        </h2>
+        <p class="mt-3 max-w-md mx-auto text-base text-gray-200 sm:text-lg md:mt-5 md:text-xl md:max-w-2xl">
+          Toast is an ES Modules based Jamstack framework for prebuilding large
+          sites
+        </p>
+        <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
+          <div class="rounded-md shadow">
+            <a
+              href="#"
+              class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-teal-600 hover:bg-teal-500 focus:outline-none focus:border-teal-700 focus:shadow-outline-teal transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
             >
-              <div class="px-5 pt-4 flex items-center justify-between">
-                <div>
-                  <img
-                    class="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg"
-                    alt=""
-                  />
-                </div>
-                <div class="-mr-2">
-                  <button
-                    type="button"
-                    class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
-                    aria-label="Close menu"
-                  >
-                    <svg
-                      class="h-6 w-6"
-                      stroke="currentColor"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M6 18L18 6M6 6l12 12"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="px-2 pt-2 pb-3">
-                <a
-                  href="#"
-                  class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                  role="menuitem"
-                >
-                  Product
-                </a>
-                <a
-                  href="#"
-                  class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                  role="menuitem"
-                >
-                  Features
-                </a>
-                <a
-                  href="#"
-                  class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                  role="menuitem"
-                >
-                  Marketplace
-                </a>
-                <a
-                  href="#"
-                  class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                  role="menuitem"
-                >
-                  Company
-                </a>
-              </div>
-              <div>
-                <a
-                  href="#"
-                  class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700 focus:outline-none focus:bg-gray-100 focus:text-indigo-700 transition duration-150 ease-in-out"
-                  role="menuitem"
-                >
-                  Log in
-                </a>
-              </div>
-            </div>
+              Get started
+            </a>
+          </div>
+          <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+            <a
+              href="#"
+              class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-teal-600 bg-white hover:text-teal-500 focus:outline-none focus:border-teal-300 focus:shadow-outline-teal transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
+            >
+              Why Toast?
+            </a>
           </div>
         </div>
-
-        <main class="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 xl:mt-28">
-          <div class="text-center">
-            <h2 class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
-              Data to enrich your
-              <br class="xl:hidden" />
-              <span class="text-indigo-600">online business</span>
-            </h2>
-            <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-              fugiat aliqua.
-            </p>
-            <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
-              <div class="rounded-md shadow">
-                <a
-                  href="#"
-                  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
-                >
-                  Get started
-                </a>
-              </div>
-              <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                <a
-                  href="#"
-                  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-indigo-600 bg-white hover:text-indigo-500 focus:outline-none focus:border-indigo-300 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
-                >
-                  Live demo
-                </a>
-              </div>
-            </div>
-          </div>
-        </main>
       </div>
-    </div>
-  </div>
+      <div class="custom-shape-divider-bottom-1601755347">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+            opacity=".25"
+            class="shape-fill"
+          ></path>
+          <path
+            d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+            opacity=".5"
+            class="shape-fill"
+          ></path>
+          <path
+            d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
+    </main>
+  </Fragment>
 );
