@@ -9,6 +9,7 @@
     "toastrs": "^0.0.19"
   },
   "scripts": {
+    "prepare": "breadbox --dest public/web_modules",
     "build": "toast incremental ."
   }
 }
