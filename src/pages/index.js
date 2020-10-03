@@ -1,7 +1,11 @@
 import { h } from "preact";
+import { Helmet } from "react-helmet";
 
 export default (props) => (
   <div>
-    <code>/me sips toast</code>
+    <Helmet>
+      <link rel="stylesheet" href="/styles.css" />
+    </Helmet>
+    <code className="bg-gray-400">/me sips toast</code>
   </div>
 );
