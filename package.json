@@ -7,6 +7,7 @@
   "type": "module",
   "dependencies": {
     "@sector/breadbox": "^0.0.4",
+    "@tailwindcss/ui": "^0.6.2",
     "autoprefixer": "^10.0.1",
     "postcss": "^8.1.1",
     "postcss-cli": "^8.0.0",
