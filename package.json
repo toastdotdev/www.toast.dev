@@ -16,7 +16,7 @@
     "toastrs": "0.0.20"
   },
   "scripts": {
-    "prepare": "breadbox --dest public/web_modules",
+    "postinstall": "breadbox --dest public/web_modules",
     "build": "npm run build:css && npm run build:site",
     "build:css": "postcss --config postcss-config index.css -o public/styles.css",
     "build:site": "toast incremental ."
