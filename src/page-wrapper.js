@@ -1,4 +1,4 @@
-import { h } from "preact";
+import { h, cloneElement } from "preact";
 import { Helmet } from "react-helmet";
 
 export default (props) => {
@@ -8,7 +8,7 @@ export default (props) => {
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
         <link rel="stylesheet" href="/styles.css" />
       </Helmet>
-      <div class="relative bg-gray-50 overflow-hidden">
+      <div class="relative bg-teal-200 overflow-hidden">
         <div class="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full">
           <div class="relative h-full max-w-screen-xl mx-auto">
             <svg
@@ -77,19 +77,25 @@ export default (props) => {
             </svg>
           </div>
         </div>
+        {props.children.type.sendNav ? (
+          cloneElement(props.children, {
+            nav: Navigation,
+            navMobile: MobileMenu,
+          })
+        ) : (
+          <div
+            class="relative pt-6 pb-12 sm:pb-16 md:pb-20 lg:pb-28 xl:pb-32"
+            style={{
+              backgroundImage:
+                "linear-gradient(160deg, hsl(201.20000000000005, 100%, 60%) , transparent 100%), linear-gradient(87deg, hsl(120, 68.2%, 66.7%) 49%, transparent 90%), radial-gradient(circle at 157% 159%, #d96cd6 18%, #C49CDE 50%)",
+            }}
+          >
+            <Navigation />
+            <MobileMenu />
 
-        <div
-          class="relative pt-6 pb-12 sm:pb-16 md:pb-20 lg:pb-28 xl:pb-32"
-          style={{
-            backgroundImage:
-              "linear-gradient(160deg, hsl(201.20000000000005, 100%, 60%) , transparent 100%), linear-gradient(87deg, hsl(120, 68.2%, 66.7%) 49%, transparent 90%)",
-          }}
-        >
-          <Navigation />
-          <MobileMenu />
-
-          {props.children}
-        </div>
+            {props.children}
+          </div>
+        )}
       </div>
     </div>
   );
@@ -191,11 +197,7 @@ const MobileMenu = () => (
       >
         <div class="px-5 pt-4 flex items-center justify-between">
           <div>
-            <img
-              class="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg"
-              alt=""
-            />
+            <img class="h-8 w-auto" src="/toast-icon-300.png" alt="" />
           </div>
           <div class="-mr-2">
             <button

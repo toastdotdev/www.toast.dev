@@ -12,7 +12,7 @@
     "postcss": "^8.1.1",
     "postcss-cli": "^8.0.0",
     "tailwindcss": "^1.8.10",
-    "toastrs": "^0.0.19"
+    "toastrs": "0.0.20"
   },
   "scripts": {
     "prepare": "breadbox --dest public/web_modules",
