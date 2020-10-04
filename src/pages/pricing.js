@@ -217,7 +217,7 @@ export default (props) => (
                         </svg>
                       </div>
                       <p class="ml-3 text-base leading-6 font-medium text-gray-500">
-                        Qui sed ab doloribus voluptatem dolore
+                        Roadmap influence
                       </p>
                     </li>
                     <li class="mt-4 flex items-start">
