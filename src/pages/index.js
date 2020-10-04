@@ -3,6 +3,9 @@ import { Helmet } from "react-helmet";
 
 const Page = ({ nav, navMobile, ...props }) => (
   <Fragment>
+    <Helmet>
+      <title>Toast: The Best Place to Stack your JAM</title>
+    </Helmet>
     <div
       class="relative pt-6 pb-12 sm:pb-16 md:pb-20 lg:pb-28 xl:pb-32"
       style={{
