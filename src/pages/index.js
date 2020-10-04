@@ -63,7 +63,7 @@ const Page = ({ nav, navMobile, ...props }) => (
             </div>
             <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
               <a
-                href="#"
+                href="#why-toast"
                 class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-teal-600 bg-white hover:text-teal-500 focus:outline-none focus:border-teal-300 focus:shadow-outline-teal transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10"
               >
                 Why Toast?
@@ -146,7 +146,7 @@ Page.sendNav = true;
 export default Page;
 
 const BelowFold = (props) => (
-  <div class="py-12 bg-white">
+  <div class="py-12 bg-white" id="why-toast">
     <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="lg:text-center">
         <p class="text-base leading-6 text-teal-600 font-semibold tracking-wide uppercase">
