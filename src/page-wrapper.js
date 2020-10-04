@@ -5,8 +5,8 @@ export default (props) => {
   return (
     <div>
       <Helmet>
-        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
         <link rel="stylesheet" href="/styles.css" />
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </Helmet>
       <div class="relative bg-teal-200 overflow-hidden">
         <div class="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full">
