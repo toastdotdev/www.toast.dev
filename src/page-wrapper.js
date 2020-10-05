@@ -49,6 +49,21 @@ export default (props) => {
       <Helmet>
         <link rel="stylesheet" href="/styles.css" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@toastdotdev" />
+        <meta name="twitter:creator" content="@chrisbiscardi" />
+        <meta
+          name="twitter:title"
+          content="Toast: The Best Place to Stack your JAM"
+        />
+        <meta
+          name="twitter:description"
+          content="Toast is an ES Modules first Jamstack metaframework built in Rust and made for people building UI"
+        />
+        <meta
+          name="twitter:image"
+          content="http://www.toast.dev/default-opengraph-image.png"
+        />
       </Helmet>
       <div class="relative bg-teal-200 overflow-hidden">
         {props.children.type.sendNav ? (
