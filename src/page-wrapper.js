@@ -107,7 +107,7 @@ const Navigation = (props) => (
     <nav class="relative flex items-center justify-between sm:h-10 md:justify-center">
       <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
         <div class="flex items-center justify-between w-full md:w-auto">
-          <a href="#" aria-label="Home">
+          <a href="/" aria-label="Home">
             <img
               class="h-8 w-auto sm:h-10"
               src="/toast-icon-300.png"
@@ -221,7 +221,7 @@ const MobileMenu = () => (
           </a>
 
           <a
-            href="#"
+            href="https://discord.gg/m2RdVRA"
             class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
             role="menuitem"
           >
