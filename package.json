@@ -14,7 +14,7 @@
     "postcss": "^8.1.1",
     "postcss-cli": "^8.0.0",
     "tailwindcss": "^1.8.10",
-    "toast": "^0.3.4"
+    "toast": "^0.3.7"
   },
   "scripts": {
     "postinstall": "breadbox --dest public/web_modules",
