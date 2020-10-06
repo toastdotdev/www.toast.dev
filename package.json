@@ -8,6 +8,7 @@
   "dependencies": {
     "@sector/breadbox": "^0.0.4",
     "@tailwindcss/ui": "^0.6.2",
+    "amplify-esm": "0.0.1",
     "autoprefixer": "^10.0.1",
     "netlify-plugin-toast-cache": "0.0.1",
     "postcss": "^8.1.1",
@@ -26,6 +27,11 @@
       "alias": {
         "react": "preact/compat"
       }
-    }
+    },
+    "knownEntrypoints": [
+      "amplify-esm",
+      "preact/hooks",
+      "preact"
+    ]
   }
 }

@@ -1,7 +1,16 @@
 import { h, cloneElement } from "preact";
+import { useEffect } from "preact/hooks";
 import { Helmet } from "react-helmet";
 
+const withAmplify = async () => {
+  const amplify = await import("/web_modules/amplify-esm.js");
+  return amplify.default;
+};
+
 export default (props) => {
+  // useEffect(async () => {
+  //   console.log(amplify.default);
+  // });
   return (
     <div>
       <div class="relative bg-teal-600">
@@ -227,8 +236,85 @@ const MobileMenu = () => (
           >
             Log in
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   </div>
 );
+
+const awsconfig = {
+  Auth: {
+    region: "us-west-2",
+    userPoolId: "us-west-2_VlhGdjlD1",
+    userPoolWebClientId: "njl7s0gq3i03qlhkt681kbckl",
+    authenticationFlowType: "CUSTOM_AUTH",
+  },
+  API: {
+    endpoints: [
+      {
+        name: "all-endpoint",
+        endpoint: "https://azgfjq0awg.execute-api.us-west-2.amazonaws.com",
+        region: "us-west-2",
+        custom_header: async () => {
+          return {
+            Authorization: `Bearer ${(
+              await window.AMPLIFY.Auth.currentSession()
+            )
+              .getIdToken()
+              .getJwtToken()}`,
+          };
+        },
+      },
+    ],
+  },
+};
+
+function getRandomString(bytes) {
+  const randomValues = new Uint8Array(bytes);
+  window.crypto.getRandomValues(randomValues);
+  return Array.from(randomValues).map(intToHex).join("");
+}
+
+function intToHex(nr) {
+  return nr.toString(16).padStart(2, "0");
+}
+
+const finishSignin = async (challenge) => {
+  try {
+    const [email, code] = challenge.split(",");
+    const user = await window.AMPLIFY.Auth.signIn(email);
+    await window.AMPLIFY.Auth.sendCustomChallengeAnswer(user, code);
+    const currentSession = await window.AMPLIFY.Auth.currentSession();
+    console.log(currentSession);
+  } catch (e) {
+    console.log(e);
+  }
+};
+
+async function signUp({ email }) {
+  try {
+    const user = await window.AMPLIFY.Auth.signUp({
+      username: email,
+      password: getRandomString(29) + "A",
+      attributes: {
+        email,
+      },
+    });
+    return user;
+  } catch (error) {
+    console.log("error signing up:", error);
+  }
+}
+const login = (email) => {
+  return fetch(
+    "https://oew6rcrg5k.execute-api.us-west-2.amazonaws.com/dev/login",
+    { method: "POST", body: JSON.stringify({ email }) }
+  )
+    .then((v) => {
+      return v.json();
+    })
+    .catch((e) => {
+      console.log(e);
+      throw e;
+    });
+};
