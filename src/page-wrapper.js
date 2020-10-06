@@ -140,12 +140,12 @@ const Navigation = (props) => (
         </div>
       </div>
       <div class="hidden md:flex md:space-x-10">
-        <a
+        {/* <a
           href="/pricing"
           class="font-medium text-gray-200 hover:text-gray-100 transition duration-150 ease-in-out"
         >
           Pricing
-        </a>
+        </a> */}
 
         <a
           href="https://discord.gg/m2RdVRA"
@@ -212,13 +212,13 @@ const MobileMenu = () => (
           </div>
         </div>
         <div class="px-2 pt-2 pb-3">
-          <a
+          {/* <a
             href="/pricing"
             class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
             role="menuitem"
           >
             Pricing
-          </a>
+          </a> */}
 
           <a
             href="https://discord.gg/m2RdVRA"
