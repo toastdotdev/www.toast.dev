@@ -13,7 +13,10 @@ export default (props) => {
                 Welcome! We're excited to announce the Toast Beta!
               </span>
               <span class="block sm:ml-2 sm:inline-block">
-                <a href="#" class="text-white font-bold underline">
+                <a
+                  href="https://chris-biscardi.ck.page/toast-beta"
+                  class="text-white font-bold underline"
+                >
                   Learn more &rarr;
                 </a>
               </span>
@@ -129,31 +132,20 @@ const Navigation = (props) => (
       </div>
       <div class="hidden md:flex md:space-x-10">
         <a
-          href="#"
+          href="/pricing"
           class="font-medium text-gray-200 hover:text-gray-100 transition duration-150 ease-in-out"
         >
-          Product
+          Pricing
         </a>
+
         <a
-          href="#"
-          class="font-medium text-gray-200 hover:text-gray-100 transition duration-150 ease-in-out"
-        >
-          Features
-        </a>
-        <a
-          href="#"
+          href="https://discord.gg/m2RdVRA"
           class="font-medium text-gray-200 hover:text-gray-100 transition duration-150 ease-in-out"
         >
           Discord
         </a>
-        <a
-          href="#"
-          class="font-medium text-gray-200 hover:text-gray-100 transition duration-150 ease-in-out"
-        >
-          Company
-        </a>
       </div>
-      <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
+      {/* <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
         <span class="inline-flex rounded-md shadow">
           <a
             href="#"
@@ -162,7 +154,7 @@ const Navigation = (props) => (
             Log in
           </a>
         </span>
-      </div>
+      </div> */}
     </nav>
   </div>
 );
@@ -212,19 +204,13 @@ const MobileMenu = () => (
         </div>
         <div class="px-2 pt-2 pb-3">
           <a
-            href="#"
+            href="/pricing"
             class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
             role="menuitem"
           >
-            Product
+            Pricing
           </a>
-          <a
-            href="#"
-            class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-            role="menuitem"
-          >
-            Features
-          </a>
+
           <a
             href="#"
             class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
@@ -232,15 +218,8 @@ const MobileMenu = () => (
           >
             Discord
           </a>
-          <a
-            href="#"
-            class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-            role="menuitem"
-          >
-            Company
-          </a>
         </div>
-        <div>
+        {/* <div>
           <a
             href="#"
             class="block w-full px-5 py-3 text-center font-medium text-teal-600 bg-gray-50 hover:bg-gray-100 hover:text-teal-700 focus:outline-none focus:bg-gray-100 focus:text-teal-700 transition duration-150 ease-in-out"
