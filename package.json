@@ -8,21 +8,28 @@
   "dependencies": {
     "@sector/breadbox": "^0.0.4",
     "@tailwindcss/ui": "^0.6.2",
+    "@toastdotdev/mdx": "0.0.6",
     "amplify-esm": "0.0.1",
     "autoprefixer": "^10.0.1",
+    "degit": "^2.8.0",
     "netlify-plugin-toast-cache": "0.0.1",
     "postcss": "^8.1.1",
     "postcss-cli": "^8.0.0",
     "tailwindcss": "^1.8.10",
-    "toast": "^0.3.7"
+    "toast": "^0.3.18"
   },
   "scripts": {
     "postinstall": "breadbox --dest public/web_modules",
-    "build": "npm run build:css && npm run build:site",
+    "build": "npm run fetch-docs && npm run build:css && npm run build:site",
     "build:css": "postcss --config postcss-config index.css -o public/styles.css",
-    "build:site": "toast incremental ."
+    "build:site": "toast incremental .",
+    "fetch-docs": "degit toastdotdev/toast/docs#main docs/bread"
   },
   "snowpack": {
+    "exclude": [
+      "public/**/*",
+      "toast.js"
+    ],
     "installOptions": {
       "alias": {
         "react": "preact/compat"
